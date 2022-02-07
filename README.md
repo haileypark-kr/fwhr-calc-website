@@ -31,14 +31,16 @@ This project is to automatically calculate the facial Widht-To-Height ratio and 
 
 
 # Installation
+
 Install python libraries in this project's root directory.
-    - `pip install -r requirements.txt`
-    - Some libraries (dlib) cannot be installed by pip - should be installed using conda with `conda install -y -c conda-forge dlib`
+- `pip install -r requirements.txt`
+- Some libraries (dlib) cannot be installed by pip - should be installed using conda with `conda install -y -c conda-forge dlib`
 
 # Usage
+
 There are two ways to run this application.
-    - Running a flask web server: If you want to analyze a few facial images with GUI.
-    - Running fWHR calcaculating script: If you want to analyze thousands of images
+- Running a flask web server: If you want to analyze a few facial images with GUI.
+- Running fWHR calcaculating script: If you want to analyze thousands of images
 
 ## Running a flask web server
 1. Command: `python app.py`
