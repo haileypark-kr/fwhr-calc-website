@@ -1,5 +1,5 @@
 # fwhr-calc-website
-This project is to automatically calculate the facial Width-To-Height ratio and get facial analysis results provided by Microsoft Azure.
+This project is to automatically measure the facial Width-To-Height ratio and get facial analysis results provided by Microsoft Azure.
 Used in 
 - [The face of risk: CEO facial masculinity and firm risk] (https://onlinelibrary.wiley.com/doi/10.1111/eufm.12175) by Shinichi Kamiya, Y. Han (Andy) Kim, Soohyun Park (Me)
 - "부자, 관상, 기술" written by Y. Han (Andy) Kim
