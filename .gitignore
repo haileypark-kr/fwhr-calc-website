@@ -1,0 +1,16 @@
+*.pyc
+__pycache__
+.DS_Store
+data
+data/
+*.cvs
+*.xlsx
+*.jpg
+*.JPG
+*.png
+*.PNG
+*.jpeg
+*.jpeg
+logs
+logs/
+azure_faceapi_key.conf
