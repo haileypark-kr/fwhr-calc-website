@@ -4,7 +4,6 @@ certifi==2021.10.8
 charset-normalizer==2.0.11
 click==8.0.3
 cycler==0.11.0
-dataclasses==0.8
 decorator==4.4.2
 et-xmlfile==1.1.0
 Flask==1.1.1

@@ -1,7 +1,7 @@
 import os
 import shutil
 import numpy as np
-from config import FACE_API_KEY_CONFIG_FILE, FACE_API_URL
+from config import FACE_API_KEY_CONFIG_FILE, FACE_API_URL, USE_MS_FACE_API
 import dlib
 import pandas as pd
 from imutils import face_utils
@@ -12,7 +12,6 @@ import requests
 import cv2
 from skimage import io
 from utils import make_directory, is_allowed_file
-
 
 def get_fWHR(dataroot, log_path, filepath, detector, predictor):
 
@@ -178,21 +177,24 @@ def analyze_face(dataroot, log_path, shape_predictor_path, out_path):
             row = [filepath.split('.')[0]]
             row.extend([0] * 139)
 
-        # face api result
-        full_filepath = os.path.join(dataroot, filepath)
-        faceapi_result = get_face_api_result(
-            FACE_API_SUBSCRIPTION_KEY, full_filepath)
-        row.extend(faceapi_result)
+        if USE_MS_FACE_API:
+            # face api result
+            full_filepath = os.path.join(dataroot, filepath)
+            faceapi_result = get_face_api_result(
+                FACE_API_SUBSCRIPTION_KEY, full_filepath)
+            row.extend(faceapi_result)
 
         # merge two results
         out.append(row)
-
+        
     columns = ['FileName', 'Width', 'Height', 'fWHR']
     for i in range(68):
         columns.append("x{}".format(i+1))
         columns.append("y{}".format(i+1))
-    columns.extend(["Age", "Gender", "Fear", "Sadness", "Disgust", "Contempt", "Neutral", "Happiness", "Anger", "Glasses", "Moustache", "Beard", "Sideburns",
-                    "Bald"])
+    
+    if USE_MS_FACE_API:
+        columns.extend(["Age", "Gender", "Fear", "Sadness", "Disgust", "Contempt", "Neutral", "Happiness", "Anger", "Glasses", "Moustache", "Beard", "Sideburns",
+                        "Bald"])
 
     outf = pd.DataFrame(out, columns=columns)
 

@@ -72,12 +72,12 @@ There are two ways to run this application.
 1. Command: `python fWHR_main.py --dataroot [path to the image directory]`
 2. Wait
 3. Go to `data/output` direcetory and get the analysis result file.
-<<<<<<< HEAD
+
 
 
 # Configurations
 
-You can change config values configured in `config.py`.
+You can change configuration values configured in `config.py`.
 
 1. directory path configs 
     - UPLOAD_FOLDER: directory to save uploaded images via flask web server
@@ -89,9 +89,7 @@ You can change config values configured in `config.py`.
     - ALLOWED_EXTENSIONS: set of allowed image extensions. case insensitive.
 
 3. Microsoft Azure configs
+    - USE_MS_FACE_API: boolean value whether to use Microsoft Face API or not. (False / True)
     - FACE_API_KEY_CONFIG_FILE: name of the config file storing Microsoft Face API key.  You can get this value in Azure portal.
     - FACE_API_ENDPOINT: endpoint of Microsoft Face API. You can get this value in Azure portal.
     - FACE_API_URL: full url for Microsoft Face API. Do not edit this value unless the API's url path is changed.
-    - FACE_API_SLEEP_TIME: sleep seconds(not milliseconds) between Microsoft Face API calls. Set 3 if you are using a Free0 tier pricing. If you are using Standard0 pricing, set this value 0. 
-=======
->>>>>>> 9fba1920deaf13124f97872e6e7e9366da564245
