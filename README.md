@@ -8,15 +8,23 @@ Used in
 You can get some estimatations of below (per image):
 - Facial Width-To-Height Ratio
 - X, y coordinates for 68 facial landmarks
-- Age
-- Gender
-- Emotions
-     - fear, sadness, disgust, contempt, neutral, happiness, anger 
-- Glasses / no glasses
-- Moustache
-- Beard
-- Sideburns
-- Bald
+
+- If you use Microsoft Face APIs:
+    - Age
+    - Gender
+    - Emotions
+        - fear, sadness, disgust, contempt, neutral, happiness, anger 
+    - Glasses / no glasses
+    - Moustache
+    - Beard
+    - Sideburns
+    - Bald
+
+
+# Notice about usage of Microsoft Face API
+Since June 11th, 2020, Microsoft Azure Face recognition services are strictly prohibited for use by or for US police departments. Read [this announcement](https://learn.microsoft.com/en-us/legal/cognitive-services/computer-vision/limited-access-identity?context=%2Fazure%2Fcognitive-services%2Fcomputer-vision%2Fcontext%2Fcontext
+)
+
 
 # Built with
 - Python 3.6
